@@ -974,7 +974,7 @@ const [navOnLight, setNavOnLight] = useState<boolean>(false)
   {/* Left Column: The Portrait */}
   <div className="manifesto-image-wrapper">
     <img 
-      src="Vitthal_Singh.jpeg"
+      src="https://i.postimg.cc/B6dHgg25/Vitthal-Singh.jpg"
       alt="Vitthal Singh" 
       className="manifesto-portrait"
     />
