@@ -102,100 +102,6 @@ const PRODUCTS: ProductCardData[] = [
   },
 ]
 
-const ADDITIONAL_TABLE_ITEMS = [
-  {
-    code: 'FR-07',
-    name: 'FRENCH BREAKFAST',
-    taxon: 'Raphanus sativus',
-    days: '24 DAYS',
-    count: '200 SEEDS',
-    lot: 'FR-26-880F',
-    purity: '99.6%',
-    germ: '96.0%',
-    weight: '310mg',
-    price: '$4.90',
-  },
-  {
-    code: 'FR-08',
-    name: 'FLORENCE MAMMOTH',
-    taxon: 'Foeniculum vulgare',
-    days: '85 DAYS',
-    count: '90 SEEDS',
-    lot: 'FR-26-215E',
-    purity: '99.1%',
-    germ: '93.4%',
-    weight: '360mg',
-    price: '$5.60',
-  },
-]
-
-const ALL_TABLE_ROWS = [
-  ...PRODUCTS.map((p) => ({
-    code: p.code,
-    name: p.name,
-    taxon: p.taxon,
-    days: p.days,
-    count: p.count,
-    lot: p.lot,
-    purity: p.purity,
-    germ: p.germ,
-    weight: p.weight,
-    price: p.price,
-  })),
-  ...ADDITIONAL_TABLE_ITEMS,
-]
-
-const CHAPTERS = [
-  {
-    idx: 'CH. 01',
-    badge: 'STAGE I / VERNAL SOWING',
-    title: 'COLD STRATIFICATION & PRIMARY EMBEDMENT',
-    body: 'Frost departure to vernal equinox. Cold-stratified seed coats absorb capillary soil moisture, triggering endogenous gibberellic enzyme cascades for uniform radical emergence.',
-    dates: 'FEB 20 – APR 10',
-  },
-  {
-    idx: 'CH. 02',
-    badge: 'STAGE II / SOLSTICE VIGOUR',
-    title: 'CANOPY ARCHITECTURE & HAND POLLINATION',
-    body: 'Midsummer photoperiod and maximum photosynthetic flux. Stigmatic receptivity is audited at dawn; select breeding trusses are isolated with fine hand-spun muslin bags.',
-    dates: 'JUN 01 – JUL 18',
-  },
-  {
-    idx: 'CH. 03',
-    badge: 'STAGE III / AUTUMN WINNOWING',
-    title: 'SEED-HEAD HARVEST & DESICCANT CURING',
-    body: 'Equinox harvest under dry air. Mature capsules are rubbed over brass sieves, winnowed in cross-breeze, and dehumidified in dark spruce bins to 7.2% equilibrium moisture.',
-    dates: 'SEP 14 – OCT 30',
-  },
-]
-
-const CUE_ITEMS = [
-  {
-    num: '01',
-    title: 'FOUNDATION SELECTION',
-    mark: 'STRAIN VERIFIED',
-    desc: 'Unbroken open-pollinated parent lineage sourced from generational seed-bank accessions.',
-  },
-  {
-    num: '02',
-    title: 'GERMINATION TRIAL',
-    mark: 'BENCHMARK ≥ 92%',
-    desc: '7-day agar bath trial under 14-hour photoperiod to measure uniform radical vigour.',
-  },
-  {
-    num: '03',
-    title: 'EMBOSSED LOT REGISTRATION',
-    mark: 'HEIDELBERG PRESS',
-    desc: 'Individual lot stamping, moisture recording, and microclimate sowing calendar imprint.',
-  },
-  {
-    num: '04',
-    title: 'PERFORATED POUCH SEAL',
-    mark: 'HERMETIC POUCH',
-    desc: 'Archival 140gsm laid kraft pouch die-cut with tear perforation and cold wax seal.',
-  },
-]
-
 interface GitHubRepository {
   id: number
   name: string
@@ -226,10 +132,9 @@ function SplitWords({ text, baseDelay = 0, step = 38 }: { text: string; baseDela
 
 export default function App() {
   // Discrete stage states (strictly updated only on integer change)
-  const [artifactPhase, setArtifactPhase] = useState<number>(0)
-  const [seasonChapter, setSeasonChapter] = useState<number>(0)
-  const [navOnLight, setNavOnLight] = useState<boolean>(false)
-  const [newsletterSubscribed, setNewsletterSubscribed] = useState<boolean>(false)
+const [, setArtifactPhase] = useState<number>(0)
+const [, setSeasonChapter] = useState<number>(0)
+const [navOnLight, setNavOnLight] = useState<boolean>(false)
 
   const [githubRepos, setGithubRepos] = useState<GitHubRepository[]>([])
   const [reposLoading, setReposLoading] = useState<boolean>(true)
