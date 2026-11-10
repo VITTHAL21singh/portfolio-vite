@@ -915,7 +915,7 @@ const [navOnLight, setNavOnLight] = useState<boolean>(false)
             <div className="hero-lockup-container">
               <div className="hero-poster-lockup">
                 <h2 ref={heroLine1Ref} className="hero-poster-line1">
-                   CYBERSECURITY & AI INTIGRATION
+                   CYBERSECURITY & AI INTEGRATION
                 </h2>
                 <h1 ref={heroLine2Ref} className="hero-poster-line2">
                   VITTHAL <span className="mark-red">SINGH</span>
