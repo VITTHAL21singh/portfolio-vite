@@ -1,4 +1,3 @@
-import type { url } from 'inspector'
 import { useEffect, useRef, useState } from 'react'
 
 interface ProductCardData {
@@ -975,7 +974,7 @@ const [navOnLight, setNavOnLight] = useState<boolean>(false)
   {/* Left Column: The Portrait */}
   <div className="manifesto-image-wrapper">
     <img 
-      src="https://i.postimg.cc/B6dHgg25/Vitthal-Singh.jpg" 
+      src="Vitthal_Singh.jpeg"
       alt="Vitthal Singh" 
       className="manifesto-portrait"
     />
